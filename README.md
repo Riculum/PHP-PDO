@@ -81,6 +81,26 @@ try {
 }
 ```
 
+The `updateAssoc` statement is used to update records in a table using an associative array and a where clause
+```php
+$data = [
+    'firstname' => 'John',
+    'lastname' => 'Doe'
+];
+
+$condition = [
+    'key' => 'id',
+    'operator' => '=',
+    'value' => 1
+];
+
+try {
+    $id = DB::updateAssoc('my_table', $data, $condition);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
+```
+
 The `delete` statement is used to delete existing records in a table
 ```php
 try {
@@ -116,3 +136,15 @@ try {
     echo $e->getMessage();
 }
 ```
+
+## Bugreport & Contribution
+If you find a bug, please either create a ticket in github, or initiate a pull request
+
+## Versioning
+We adhere to semantic (major.minor.patch) versioning (https://semver.org/). This means that:
+
+* Patch (x.x.patch) versions fix bugs
+* Minor (x.minor.x) versions introduce new, backwards compatible features or improve existing code.
+* Major (major.x.x) versions introduce radical changes which are not backwards compatible.
+
+In your automation or procedure you can always safely update patch & minor versions without the risk of your application failing.
