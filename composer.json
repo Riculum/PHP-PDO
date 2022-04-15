@@ -1,0 +1,21 @@
+{
+    "name": "riculum/php-pdo",
+    "description": "A complete database toolkit written in PHP to handle MySQL statements",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Riculum",
+            "email": "riculum@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Database\\": "./"
+        }
+    },
+    "require": {
+        "php": ">=7.4.0",
+        "vlucas/phpdotenv": "^5.3"
+    }
+}
