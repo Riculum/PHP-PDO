@@ -11,11 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Database\\": "./"
+            "Database\\": "src/"
         }
     },
     "require": {
         "php": ">=7.4.0",
-        "vlucas/phpdotenv": "^5.3"
+        "vlucas/phpdotenv": "^5.3",
+        "ext-pdo": "*"
     }
 }
