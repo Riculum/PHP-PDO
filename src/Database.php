@@ -1,5 +1,5 @@
 <?php
-namespace Database;
+namespace Riculum;
 
 use PDO;
 
